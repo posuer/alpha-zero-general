@@ -111,7 +111,10 @@ class GraphcolorGame(Game):
             print(y, "|", end="")    # print the row #
             for x in range(n):
                 piece = board[y][x]    # get the piece to print
-                print(GraphcolorGame.square_content[piece], end=" ")
+                if piece != 0:
+                    print(GraphcolorGame.square_content[piece], end=" ")
+                else:
+                    print(" ", end=" ")
             print("|")
 
         print("-----------------------")

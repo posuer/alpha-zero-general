@@ -65,7 +65,7 @@ class MCTS():
         Returns:
             v: the negative of the value of the current canonicalBoard
         """
-
+        self.game.display(canonicalBoard)
         s = self.game.stringRepresentation(canonicalBoard)
 
         if s not in self.Es:
