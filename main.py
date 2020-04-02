@@ -1,7 +1,7 @@
 from Coach import Coach
 #from othello.OthelloGame import OthelloGame as Game
 #from othello.pytorch.NNet import NNetWrapper as nn
-from graph_coloring.GraphcorlorGame import GraphcorlorGame as Game
+from graph_coloring.GraphcolorGame import GraphcolorGame as Game
 from graph_coloring.pytorch.NNet import NNetWrapper as nn
 from utils import *
 
@@ -23,7 +23,7 @@ args = dotdict({
 })
 
 if __name__ == "__main__":
-    g = Game(6)
+    g = Game(10)
     nnet = nn(g)
 
     if args.load_model:
