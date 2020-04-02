@@ -2,7 +2,7 @@ from __future__ import print_function
 import sys
 sys.path.append('..')
 from Game import Game
-from .OthelloLogic import Board
+from .GraphcolorLogic import Board
 import numpy as np
 
 class GraphcolorGame(Game):
@@ -15,7 +15,7 @@ class GraphcolorGame(Game):
 
     @staticmethod
     def getSquarePiece(piece):
-        return OthelloGame.square_content[piece]
+        return GraphcolorGame.square_content[piece]
 
     def __init__(self, n):
         self.n = n
@@ -27,7 +27,7 @@ class GraphcolorGame(Game):
 
     def getBoardSize(self):
         # (a,b) tuple
-        return (self.n, self.n, 3) 
+        return (self.n, self.n) 
 
     def getActionSize(self):
         # return number of actions
